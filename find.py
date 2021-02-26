@@ -14,7 +14,7 @@ def find(urls):
 	try:
 		req = requests.get(urls, headers={}, timeout=14)
 		req.raise_for_status()
-		print('\033[0;32m[√] Admin Login Found : '+urls+'\033[0m\n')
+		print('\n\n\033[0;32m[√] Admin Login Found : '+urls+'\033[0m\n')
 		open('found.txt', 'a').write(urls+'\n')
 	except requests.RequestException:
 		print('\033[0;31m[x] Not Found : '+urls, end='\r'*2+'\033[0m')
